@@ -1,0 +1,68 @@
+2019-10-17 17:07:04,116 ERROR: Exception on /user/user1 [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 92, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
+2019-10-18 10:38:51,610 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\__init__.py:45]
+2019-10-18 10:38:53,613 ERROR: Exception on / [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\routes.py", line 39, in index
+    prev_url=prev_url)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\templates\index.html", line 14, in root
+    </p>
+  File "C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\templates\base.html", line 55, in root
+  File "C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\templates\index.html", line 61, in block_content
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: '_' is undefined
+2019-10-18 10:42:25,922 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\__init__.py:45]
+2019-10-18 10:44:53,160 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\__init__.py:45]
+2019-10-18 10:47:28,151 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\__init__.py:45]
+2019-10-18 10:57:01,738 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:45]
+2019-10-18 10:58:05,935 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:45]

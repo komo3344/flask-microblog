@@ -1,0 +1,112 @@
+2019-10-17 15:35:35,666 ERROR: Exception on /reset_password_request [POST] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 168, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\email.py", line 23, in send_password_reset_email
+    user=user, token=token),
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: email/reset_password.txt
+2019-10-17 15:40:31,006 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:50]
+2019-10-17 16:16:59,909 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-17 16:17:18,841 ERROR: Exception on /user/email [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 79, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
+2019-10-17 16:17:30,001 ERROR: Exception on /user/email [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 79, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
+2019-10-17 16:20:07,218 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-17 16:20:10,714 ERROR: Exception on /user/email [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 79, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
+2019-10-17 16:20:22,873 ERROR: Exception on /user/email [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 79, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
