@@ -7,6 +7,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 from config import Config
 
 app = Flask(__name__)
@@ -17,6 +18,7 @@ login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app)
 bootstrap = Bootstrap(app)
+moment = Moment(app)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
@@ -47,9 +49,3 @@ if not app.debug:
     app.logger.info('Microblog startup')
 
 from app import routes, models, errors
-
-# set MAIL_SERVER=smtp.googlemail.com
-# set MAIL_PORT=587
-# set MAIL_USE_TLS=1
-# set MAIL_USERNAME=<your-gmail-username>
-# set MAIL_PASSWORD=<your-gmail-password>

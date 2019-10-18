@@ -66,3 +66,5 @@ jinja2.exceptions.UndefinedError: '_' is undefined
 2019-10-18 10:47:28,151 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\clone-microblog\microblog\app\__init__.py:45]
 2019-10-18 10:57:01,738 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:45]
 2019-10-18 10:58:05,935 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:45]
+2019-10-18 11:30:03,139 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:47]
+2019-10-18 14:07:39,462 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:49]
