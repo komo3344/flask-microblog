@@ -1,21 +1,73 @@
-2019-10-18 17:17:02,217 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:49]
-2019-10-18 17:49:07,902 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:49]
-2019-10-21 08:43:27,161 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:49]
-2019-10-21 09:21:57,021 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:51]
-2019-10-21 09:48:00,026 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 09:50:35,447 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 09:56:26,892 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:03:01,403 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:03:56,845 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:16:56,820 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:18:51,987 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:19:12,782 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:22:56,065 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:23:06,942 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:23:17,242 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:23:23,532 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:23:27,712 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:24:03,075 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:26:37,382 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:26:41,893 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-21 10:26:47,147 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:54:56,734 ERROR: Exception on /search [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 238, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\util\retry.py", line 376, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\packages\six.py", line 735, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 387, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\ZB-PC087\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1244, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\ZB-PC087\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1290, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\ZB-PC087\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1239, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\ZB-PC087\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\ZB-PC087\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 966, in send
+    self.connect()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\connection.py", line 184, in connect
+    conn = self._new_conn()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001ECBD09FFC8>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 208, in search
+    app.config['POSTS_PER_PAGE'])
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\models.py", line 89, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\search.py", line 22, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 805, in search
+    "GET", _make_path(index, "_search"), params=params, body=body
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 350, in perform_request
+    timeout=timeout,
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 250, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x000001ECBD09FFC8>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x000001ECBD09FFC8>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다)

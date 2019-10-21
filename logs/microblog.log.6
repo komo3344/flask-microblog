@@ -1,81 +1,4 @@
-2019-10-16 18:12:33,144 ERROR: Exception on /index [POST] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
-    cursor, statement, parameters, context
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 580, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.InterfaceError: Error binding parameter 3 - probably unsupported type.
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 17, in index
-    db.session.commit()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 162, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1027, in commit
-    self.transaction.commit()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 494, in commit
-    self._prepare_impl()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 473, in _prepare_impl
-    self.session.flush()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2470, in flush
-    self._flush(objects)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2608, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
-    raise value
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2568, in _flush
-    flush_context.execute()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 589, in execute
-    uow,
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
-    insert,
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1137, in _emit_insert_statements
-    statement, params
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 988, in execute
-    return meth(self, multiparams, params)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1107, in _execute_clauseelement
-    distilled_params,
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1253, in _execute_context
-    e, statement, parameters, cursor, context
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1473, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
-    raise value.with_traceback(tb)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
-    cursor, statement, parameters, context
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 580, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.InterfaceError: <unprintable InterfaceError object>
-2019-10-16 18:14:54,459 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:48]
-2019-10-16 18:15:04,589 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:48]
-2019-10-16 18:15:15,057 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:48]
-2019-10-17 14:34:41,251 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:50]
-2019-10-17 15:33:34,835 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:50]
-2019-10-17 15:34:33,742 ERROR: Exception on /reset_password_request [POST] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+2019-10-17 15:35:35,666 ERROR: Exception on /reset_password_request [POST] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -108,4 +31,82 @@ Traceback (most recent call last):
   File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: email/reset_password.txt
-2019-10-17 15:35:24,131 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:50]
+2019-10-17 15:40:31,006 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:50]
+2019-10-17 16:16:59,909 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-17 16:17:18,841 ERROR: Exception on /user/email [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 79, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
+2019-10-17 16:17:30,001 ERROR: Exception on /user/email [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 79, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
+2019-10-17 16:20:07,218 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-17 16:20:10,714 ERROR: Exception on /user/email [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 79, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'
+2019-10-17 16:20:22,873 ERROR: Exception on /user/email [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 79, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+AttributeError: 'User' object has no attribute 'posts'

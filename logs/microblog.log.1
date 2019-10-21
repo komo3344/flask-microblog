@@ -1,5 +1,27 @@
-2019-10-17 16:59:16,184 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-17 16:59:24,397 ERROR: Exception on /user/user1 [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+2019-10-18 17:17:02,217 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:49]
+2019-10-18 17:49:07,902 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:49]
+2019-10-21 08:43:27,161 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:49]
+2019-10-21 09:21:57,021 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:51]
+2019-10-21 09:48:00,026 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 09:50:35,447 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 09:56:26,892 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:03:01,403 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:03:56,845 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:16:56,820 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:18:51,987 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:19:12,782 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:22:56,065 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:23:06,942 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:23:17,242 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:23:23,532 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:23:27,712 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:24:03,075 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:26:37,382 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:26:41,893 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:26:47,147 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+2019-10-21 10:51:06,556 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:56]
+2019-10-21 10:53:45,222 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:56]
+2019-10-21 10:53:47,444 ERROR: Exception on / [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -15,105 +37,47 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 93, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-AttributeError: 'User' object has no attribute 'posts'
-2019-10-17 17:00:28,577 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-17 17:00:31,036 ERROR: Exception on /user/user1 [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 41, in index
+    prev_url=prev_url)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\templates\index.html", line 17, in root
+    <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\templates\base.html", line 14, in root
+    <span class="icon-bar"></span>
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 10, in root
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block_doc
+    {% block body -%}
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 39, in block_html
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 90, in block_body
+  File "C:\Users\ZB-PC087\Desktop\microblog\app\templates\base.html", line 52, in block_navbar
+    {% for message in messages %}
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
     reraise(exc_type, exc_value, tb)
   File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 93, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-AttributeError: 'User' object has no attribute 'posts'
-2019-10-17 17:01:27,445 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-17 17:01:29,436 ERROR: Exception on /user/user1 [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 93, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-AttributeError: 'User' object has no attribute 'posts'
-2019-10-17 17:01:56,243 ERROR: Exception on /user/user1 [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 93, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-AttributeError: 'User' object has no attribute 'posts'
-2019-10-17 17:03:51,967 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
-2019-10-17 17:03:54,515 ERROR: Exception on /user/user1 [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 92, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-AttributeError: 'User' object has no attribute 'posts'
-2019-10-17 17:04:05,356 ERROR: Exception on /user/user1 [GET] [in c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\ZB-PC087\Desktop\microblog\app\routes.py", line 92, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-AttributeError: 'User' object has no attribute 'posts'
-2019-10-17 17:07:01,678 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:52]
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "c:\users\zb-pc087\desktop\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.search'. Did you mean 'search' instead?
+2019-10-21 10:54:34,750 INFO: Microblog startup [in C:\Users\ZB-PC087\Desktop\microblog\app\__init__.py:56]
